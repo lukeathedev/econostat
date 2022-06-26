@@ -38,6 +38,12 @@ Ferramentas que automatizam o processo de captar preços e formar indicadores ec
 - UTFPR:               Mensal
 - EconoStat Automagic: Diária
 
+## Quickstart
+
+```sh
+docker compose up -d
+```
+
 ## Tecnologias
 
 As ferramentas são baseadas em Javascript Node com extensão Typescript e utilizam tecnologia de contêineres Docker para fácil replicação e deployment em ambientes de produção.
