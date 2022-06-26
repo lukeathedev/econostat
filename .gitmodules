@@ -1,0 +1,9 @@
+[submodule "automail"]
+	path = automail
+	url = https://github.com/lukeathedev/automail
+[submodule "dashboard"]
+	path = dashboard
+	url = https://github.com/lukeathedev/dashboard
+[submodule "scraper"]
+	path = scraper
+	url = https://github.com/lukeathedev/scraper
