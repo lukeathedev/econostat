@@ -48,4 +48,6 @@ automail/ é responsável por fazer o download automático de arquivos .csv ou .
 
 dashboard/ é a ferramenta de visualização online dos dados captados pelas universidades e pelo scraper. Utiliza React.js como tecnologia de frontend.
 
+database/ contém definições da base de dados que agrega os preços obtidos.
+
 scraper/ é a implementação de uma API REST que fornece dados retirados de sites dos principais supermercados de Londrina.
