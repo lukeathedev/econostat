@@ -5,8 +5,8 @@
 	path = dashboard
 	url = https://github.com/lukeathedev/dashboard
 [submodule "scraper"]
-	path = scraper
-	url = https://github.com/lukeathedev/scraper
+	path = aggregator
+	url = https://github.com/lukeathedev/aggregator
 [submodule "database"]
 	path = database
 	url = https://github.com/lukeathedev/database

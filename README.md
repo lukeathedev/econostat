@@ -57,6 +57,8 @@ dashboard/ é a ferramenta de visualização online dos dados captados pelas uni
 
 database/ contém definições da base de dados que agrega os preços obtidos.
 
+rmd/ possui arquivos em R Markdown atualizados para garantir a compatibilidade com o novo design das planilhas e bases de dados.
+
 scraper/ é a implementação de uma API REST que fornece dados retirados de sites dos principais supermercados de Londrina.
 
 ## TODOs

@@ -11,8 +11,8 @@ services:
       - LOGLEVEL=${LOGLEVEL:-debug}
     volumes:
       - './shared:/usr/bin/automail/downloads'
-    # profiles:
-    #   - donotstart
+    profiles:
+      - donotstart
 
   # Database
   pgadmin:
