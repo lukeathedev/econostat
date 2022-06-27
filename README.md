@@ -46,6 +46,8 @@ Ferramentas que automatizam o processo de captar preços e formar indicadores ec
 ## Quickstart
 
 ```sh
+git clone https://github.com/lukeathedev/econostat --recursive
+
 docker compose build
 docker compose up -d
 ```
