@@ -47,7 +47,18 @@ Ferramentas que automatizam o processo de captar preços e formar indicadores ec
 
 ```sh
 git clone https://github.com/lukeathedev/econostat --recursive
+```
 
+Crie um arquivo `.env` em `automail/`, especificando:
+
+```
+IMAP_USER=usuario@email.com
+IMAP_PASS=senha-do-email
+```
+
+Então:
+
+```
 docker compose build
 docker compose up -d
 ```
