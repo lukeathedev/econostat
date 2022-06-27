@@ -38,6 +38,11 @@ Ferramentas que automatizam o processo de captar preços e formar indicadores ec
 - UTFPR:               Mensal
 - EconoStat Automagic: Diária
 
+## Pré-requisitos
+
+- [docker](https://docs.docker.com/engine/install)
+- [docker-compose](https://docs.docker.com/engine/install/)
+
 ## Quickstart
 
 ```sh
@@ -45,7 +50,11 @@ docker compose build
 docker compose up -d
 ```
 
-Senha PGAdmin4: admin
+E-mail pgAdmin4: anon@localhost.net
+
+Senha pgAdmin4: admin (para base de dados e usuário de acesso)
+
+Navegue até `localhost` ou `127.0.0.1` no seu navegador para acessar a API. Navegue até `localhost:81` ou `127.0.0.1:81` para acessar o software de administração da base de dados (pgAdmin4).
 
 ## Tecnologias
 
@@ -69,3 +78,4 @@ shared/ é uma pasta criada para compartilhar arquivos entre os contêineres. Tr
 
 - Criar dashboard
 - Integrar scraper
+- Automatizar inserção na DB
