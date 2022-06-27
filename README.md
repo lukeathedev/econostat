@@ -41,6 +41,7 @@ Ferramentas que automatizam o processo de captar preços e formar indicadores ec
 ## Quickstart
 
 ```sh
+docker compose build
 docker compose up -d
 ```
 

@@ -1,4 +1,20 @@
 services:
+  # Automail
+  automail:
+    build: ./automail
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 2m
+        max-file: "3"
+    environment:
+      - LOGLEVEL=${LOGLEVEL:-debug}
+    volumes:
+      - './shared:/usr/bin/automail/downloads'
+    # profiles:
+    #   - donotstart
+
+  # Database
   pgadmin:
     image: dpage/pgadmin4
     environment:
@@ -6,9 +22,11 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD:-admin}
       - PGADMIN_SERVER_JSON_FILE=${PGADMIN_SERVER_JSON_FILE}
     ports:
-      - "80:80"
+      - "81:80"
     depends_on:
       - database
+    profiles:
+      - donotstart
 
   database:
     build: ./database
@@ -22,3 +40,8 @@ services:
         max-file: "3"
     ports:
       - "${DB_PORT:-5432}:5432"
+    profiles:
+      - donotstart
+
+volumes:
+  shared:
