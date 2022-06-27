@@ -25,8 +25,8 @@ services:
       - "81:80"
     depends_on:
       - database
-    profiles:
-      - donotstart
+    # profiles:
+    #   - donotstart
 
   database:
     build: ./database
@@ -40,8 +40,8 @@ services:
         max-file: "3"
     ports:
       - "${DB_PORT:-5432}:5432"
-    profiles:
-      - donotstart
+    # profiles:
+    #   - donotstart
 
 volumes:
   shared:

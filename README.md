@@ -58,3 +58,8 @@ dashboard/ é a ferramenta de visualização online dos dados captados pelas uni
 database/ contém definições da base de dados que agrega os preços obtidos.
 
 scraper/ é a implementação de uma API REST que fornece dados retirados de sites dos principais supermercados de Londrina.
+
+## TODOs
+
+- Criar dashboard
+- Integrar scraper
