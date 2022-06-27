@@ -1,4 +1,28 @@
 services:
+  # Aggregator
+  aggregator:
+    hostname: aggregator
+    build: ./aggregator
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: 2m
+        max-file: "3"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=80
+      - PGHOST=database
+      - PGUSER=anon
+      - PGPASSWORD=admin
+      - PGDATABASE=anon
+      - PGPORT=5432
+    ports:
+      - "80:80"
+    volumes:
+      - './shared:/usr/bin/aggregator/downloads'
+    # profiles:
+    #   - donotstart
+
   # Automail
   automail:
     build: ./automail
@@ -11,8 +35,8 @@ services:
       - LOGLEVEL=${LOGLEVEL:-debug}
     volumes:
       - './shared:/usr/bin/automail/downloads'
-    profiles:
-      - donotstart
+    # profiles:
+    #   - donotstart
 
   # Database
   pgadmin:
@@ -23,12 +47,15 @@ services:
       - PGADMIN_SERVER_JSON_FILE=${PGADMIN_SERVER_JSON_FILE}
     ports:
       - "81:80"
+    volumes:
+      - ./servers.json:/pgadmin4/servers.json
     depends_on:
       - database
     # profiles:
     #   - donotstart
 
   database:
+    hostname: database
     build: ./database
     restart: unless-stopped
     environment:

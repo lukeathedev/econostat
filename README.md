@@ -45,11 +45,15 @@ docker compose build
 docker compose up -d
 ```
 
+Senha PGAdmin4: admin
+
 ## Tecnologias
 
 As ferramentas são baseadas em Javascript Node com extensão Typescript e utilizam tecnologia de contêineres Docker para fácil replicação e deployment em ambientes de produção.
 
 ## Estrutura dos arquivos
+
+aggregator/ é a implementação de uma API REST que fornece dados retirados de sites dos principais supermercados de Londrina.
 
 automail/ é responsável por fazer o download automático de arquivos .csv ou .xlsx anexos por e-mail por membros responsáveis da UTFPR.
 
@@ -59,7 +63,7 @@ database/ contém definições da base de dados que agrega os preços obtidos.
 
 rmd/ possui arquivos em R Markdown atualizados para garantir a compatibilidade com o novo design das planilhas e bases de dados.
 
-scraper/ é a implementação de uma API REST que fornece dados retirados de sites dos principais supermercados de Londrina.
+shared/ é uma pasta criada para compartilhar arquivos entre os contêineres. Trata-se do lugar onde as planilhas recebidas são mantidas.
 
 ## TODOs
 
